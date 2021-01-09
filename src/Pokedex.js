@@ -19,6 +19,8 @@ class Pokedex extends Component {
         return (
             <React.Fragment>
                 <h1 style={{textAlign: "center"}}>POKEDEX</h1>
+                <h3 style={{textAlign: "center"}}>Total Experience: {this.props.exp}</h3>
+                <h3 style={{textAlign: "center"}}>{this.props.isWinner ? 'WINNER' : "LOSER"}</h3>  
                 <div className="Pokedex">
                 {this.props.pokemon.map((p) => (
                     <Pokecard id={p.id} name={p.name} type={p.type} EXP={p.base_experience} />
